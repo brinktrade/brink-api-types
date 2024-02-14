@@ -1,0 +1,19 @@
+{
+  "name": "@brinkninja/api-types",
+  "version": "0.0.1",
+  "description": "TypeScript types for Brink API",
+  "license": "GPL-3.0-or-later",
+  "main": "dist/Types.js",
+  "types": "dist/Types.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "release": "standard-version --skip.changelog --skip.commit --skip.tag"
+  },
+  "devDependencies": {
+    "standard-version": "^9.5.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@brinkninja/types": "^0.15.0"
+  }
+}
