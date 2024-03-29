@@ -28,9 +28,9 @@ export interface DeclarationNonceResponse extends IntentNonceResponse {
 export interface TransactionAPIResponse {
   hash: string
   status: 'succeeded' | 'failed'
-  timestamp: string
-  usdValueAtot: string
-  pointsClaimed: string
+  txTime: string
+  usdValueAtot?: string
+  pointsClaimed?: string
 }
 
 export interface DeclarationTransactionAPIResponse extends TransactionAPIResponse {
