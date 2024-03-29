@@ -25,11 +25,15 @@ export interface DeclarationNonceResponse extends IntentNonceResponse {
   intentIndex: number
 }
 
-export interface TransactionHashResponse {
+export interface TransactionAPIResponse {
   hash: string
+  status: 'succeeded' | 'failed'
+  timestamp: string
+  usdValueAtot: string
+  pointsClaimed: string
 }
 
-export interface DeclarationTransactionHashResponse extends TransactionHashResponse {
+export interface DeclarationTransactionAPIResponse extends TransactionAPIResponse {
   intentIndex: number
 }
 
@@ -56,7 +60,7 @@ export interface SignedDeclarationMetadata {
   expiryTime?: string | ProcessError
   tokens: DeclarationTokenResponse[]
   nonces: DeclarationNonceResponse[]
-  transactions: DeclarationTransactionHashResponse[]
+  transactions: DeclarationTransactionAPIResponse[]
   source?: string
   hash: string
 }
