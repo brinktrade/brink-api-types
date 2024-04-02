@@ -433,3 +433,18 @@ export interface GetRoutingRouteSwapForInput extends MultichainRequest, RoutingR
   tokenInAmount: string
   tokenOut: string
 }
+
+//////////////////////////////////////////
+// Points
+//////////////////////////////////////////
+// POST /points/claim/v1
+
+export interface PostPointsClaimV1Request {
+  declarationHash?: string
+  signature: string
+  signer: string
+}
+
+export interface PostPointsClaimV1Response {
+  count: number
+}
