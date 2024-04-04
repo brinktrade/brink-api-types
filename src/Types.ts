@@ -448,3 +448,14 @@ export interface PostPointsClaimV1Request {
 export interface PostPointsClaimV1Response {
   count: number
 }
+
+// GET /points/v1
+export interface GetPointsV1Request {
+  signer: string
+}
+
+export interface GetPointsV1Response {
+  claimed: number
+  total: number
+  unclaimed: number
+}
